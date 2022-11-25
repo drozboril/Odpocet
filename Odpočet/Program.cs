@@ -77,7 +77,7 @@ namespace Odpočet
         {
             for (int i = 0; i < 3; i++)
             {
-                Console.Write("{0} ", horizontal);
+                Console.Write("{0}", horizontal);
             }
             Console.WriteLine();
             return;
@@ -92,7 +92,7 @@ namespace Odpočet
         }
         public void EmptyCenter(char vertical)
         {
-            Console.WriteLine("{0}   {1}", vertical, vertical);
+            Console.WriteLine("{0} {1}", vertical, vertical);
             return;
         }
         public void Jedna(char vertical)
@@ -103,18 +103,19 @@ namespace Odpočet
         public void Dvě(char horizontal, char vertical)
         {
             HorizontalObject(horizontal);
-            Console.WriteLine("    {0}", vertical);
+            Console.WriteLine("  {0}", vertical);
             HorizontalObject(horizontal);
-            Console.WriteLine("{0}    ", vertical);
+            Console.WriteLine("{0}  ", vertical);
             HorizontalObject(horizontal);
             return;
         }
         public void Tři(char horizontal, char vertical)
         {
-            HorizontalObject(horizontal);
-            Console.WriteLine("    {0}", vertical);
-            HorizontalObject(horizontal);
-            Console.WriteLine("    {0}", vertical);
+            for (int i = 0; i < 2; i++)
+            {
+                HorizontalObject(horizontal);
+                Console.WriteLine("  {0}", vertical);
+            }
             HorizontalObject(horizontal);
             return;
         }
@@ -123,23 +124,25 @@ namespace Odpočet
             Console.WriteLine();
             EmptyCenter(vertical);
             HorizontalObject(horizontal);
-            Console.WriteLine("{0}    ", vertical);
-            Console.WriteLine("{0}    ", vertical);
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("{0}  ", vertical);
+            }
             return;
         }
         public void Pět(char horizontal, char vertical)
         {
             HorizontalObject(horizontal);
-            Console.WriteLine("{0}    ", vertical);
+            Console.WriteLine("{0}  ", vertical);
             HorizontalObject(horizontal);
-            Console.WriteLine("    {0}", vertical);
+            Console.WriteLine("  {0}", vertical);
             HorizontalObject(horizontal);
             return;
         }
         public void Šest(char horizontal, char vertical)
         {
             HorizontalObject(horizontal);
-            Console.WriteLine("{0}    ", vertical);
+            Console.WriteLine("{0}  ", vertical);
             HorizontalObject(horizontal);
             EmptyCenter(vertical);
             HorizontalObject(horizontal);
@@ -150,16 +153,17 @@ namespace Odpočet
             HorizontalObject(horizontal);
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("    {0}", vertical);
+                Console.WriteLine("  {0}", vertical);
             }
             return;
         }
         public void Osm(char horizontal, char vertical)
         {
-            HorizontalObject(horizontal);
-            EmptyCenter(vertical);
-            HorizontalObject(horizontal);
-            EmptyCenter(vertical);
+            for (int i = 0; i < 2; i++)
+            {
+                HorizontalObject(horizontal);
+                EmptyCenter(vertical);
+            }
             HorizontalObject(horizontal);
             return;
         }
@@ -170,7 +174,7 @@ namespace Odpočet
             HorizontalObject(horizontal);
             for (int i = 0; i < 2; i++)
             {
-                Console.WriteLine("    {0}", vertical);
+                Console.WriteLine("  {0}", vertical);
             }
             return;
         }
