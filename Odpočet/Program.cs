@@ -18,7 +18,7 @@ namespace Odpočet
             {
                 Console.SetWindowSize(10, 10);
                 Odpočet_Třída o = new Odpočet_Třída();
-                SoundPlayer beep = new SoundPlayer(@"F:\Users\User\Desktop\Dave\SŠ\MOA\Prog\MOA4\Odpočet\beep.wav");
+                SoundPlayer beep = new SoundPlayer(@"F:\Users\User\Desktop\Dave\SŠ\MOA\Prog\MOA4\Odpočet\beep.wav"); //uživatel musí po stažení opravit umístění aby se přehrávaly zvuky
                 SoundPlayer boom = new SoundPlayer(@"F:\Users\User\Desktop\Dave\SŠ\MOA\Prog\MOA4\Odpočet\explode.wav");
                 for (int i = vstup; i > 0; i--)
                 {
